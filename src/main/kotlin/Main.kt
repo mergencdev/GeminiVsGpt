@@ -2,6 +2,10 @@ fun main(args: Array<String>) {
     print("1. Write the code that draws a diamond with stars on the console in Kotlin.\n\n")
     drawDiamondGemini(5)
     drawDiamondChatGPT(5)
+
+    print("\n2. Implement a Linked List Data Structure\n\n")
+    linkedListGemini()
+    linkedListChatGPT()
 }
 
 // 1. Write the code that draws a diamond with stars on the console in Kotlin.
@@ -49,4 +53,52 @@ fun drawDiamondChatGPT(rows: Int) {
         }
         println()
     }
+}
+
+// 2. Implement a Linked List Data Structure
+// Gemini:
+private fun linkedListGemini() {
+    print("Gemini:\n")
+
+    val linkedList = LinkedListGemini<Int>()
+
+    linkedList.insertAtEnd(10)
+    linkedList.insertAtBeginning(20)
+    linkedList.insertAtEnd(30)
+
+    println("Linked List:")
+    linkedList.traverse()
+
+    linkedList.deleteAtBeginning()
+    linkedList.deleteAtEnd()
+
+    println("Linked List after deletions:")
+    linkedList.traverse()
+}
+
+// ChatGPT:
+private fun linkedListChatGPT() {
+    print("\nChatGPT:\n")
+
+    val list = LinkedListChatGPT()
+
+    // Insert nodes into the list
+    list.insert(10)
+    list.insert(20)
+    list.insert(30)
+    list.insert(40)
+
+    // Traverse and print the list
+    println("Linked List after insertion:")
+    list.traverse()
+
+    // Delete a node from the list
+    list.delete(20)
+    println("Linked List after deletion of node with data 20:")
+    list.traverse()
+
+    // Attempt to delete a node that doesn't exist
+    list.delete(50)
+    println("Linked List after attempting to delete node with data 50:")
+    list.traverse()
 }
